@@ -1,0 +1,51 @@
+.Home {
+  /* Size */
+  height: 80vh;
+
+  /* Display */
+  @include FlexCenter;
+  flex-direction: column;
+
+  & .Name {
+    /* Display */
+    @include FlexRow;
+
+    /* Font */
+    font-size: 10vh;
+    font-family: Rubik Mono One;
+    text-transform: uppercase;
+
+    /* Animation */
+    animation: Floating 5s ease-in-out infinite;
+  }
+
+  & .PreName {
+    /* Display */
+    @include FlexRow;
+
+    /* Font */
+    font-size: 8vh;
+    font-family: Rubik Mono One;
+    text-transform: uppercase;
+
+    @include Phone {
+      /* Font */
+      font-size: 5vh;
+    }
+  }
+
+  & .homePageCircle {
+    /* Size */
+    width: 270px;
+    height: 270px;
+
+    /* Position */
+    position: absolute;
+    z-index: -1;
+
+    /* Decoration */
+    border-radius: 50%;
+    background: linear-gradient($TertiaryColor, $PrimaryColor);
+    box-shadow: 0px 0px 25px $ShadowColor;
+  }
+}

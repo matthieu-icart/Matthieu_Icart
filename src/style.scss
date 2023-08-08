@@ -1,0 +1,19 @@
+/* INDEX */
+@import './index.scss';
+
+/* MIXIN */
+@import './Sass/mixin.scss';
+
+/* LAYOUT */
+@import './Layout/Header/header.scss';
+@import './Layout/Main/main.scss';
+@import './Layout/Footer/footer.scss';
+
+/* PAGES */
+@import './Pages/Formation/formation.scss';
+@import './Pages/Experiences/experiences.scss';
+@import './Pages/Skills/skills.scss';
+@import './Pages/Home/Home.scss';
+@import './Pages/Loisirs/loisirs.scss';
+@import './Pages/Portfolio/portfolio.scss';
+@import './Pages/Contact/contact.scss';

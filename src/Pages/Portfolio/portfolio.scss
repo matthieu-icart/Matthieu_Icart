@@ -1,0 +1,87 @@
+.Portfolio {
+  /* Display */
+  @include FlexRow;
+  flex-wrap: wrap;
+
+  @include Phone {
+    /* Display */
+    @include FlexColumn;
+  }
+
+  & article {
+    /* Size */
+    width: 40%;
+    height: calc(80vh / 5);
+    box-sizing: border-box;
+
+    @include Phone {
+      /* Size */
+      width: 80%;
+      height: calc(80vh / 9);
+    }
+
+    & a {
+      /* Size */
+      width: 100%;
+      height: 70%;
+
+      @include Phone {
+        /* Size */
+        width: 100%;
+        height: 70%;
+      }
+
+      /* Display */
+      @include FlexColumn;
+
+      /* Layout */
+      padding: 5px;
+
+      /* Decoration */
+      border: 1px solid $SecondaryColor;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px $ShadowColor;
+
+      @include Phone {
+        /* Decoration */
+        box-shadow: 0px 0px 10px $ShadowColor;
+      }
+
+      /* Transition */
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        /* Transform */
+        transform: scale(1.1);
+
+        /* Decoration */
+        background-color: $TertiaryColor;
+      }
+    }
+
+    & h3 {
+      /* Font */
+      font-style: italic;
+
+      @include Phone {
+        /* Font */
+        font-size: 12px;
+      }
+    }
+
+    & p {
+      /* Font */
+      font-size: 15px;
+
+      @media screen and (max-width: 700px) {
+        /* Font */
+        font-size: 12px;
+      }
+
+      @include Phone {
+        /* Font */
+        font-size: 10px;
+      }
+    }
+  }
+}

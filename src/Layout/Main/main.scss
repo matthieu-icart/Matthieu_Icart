@@ -1,0 +1,15 @@
+main {
+  /* Size */
+  width: 100%;
+  height: 80vh;
+
+  /* Position */
+  position: relative;
+  top: 20px;
+
+  /* Display */
+  @include FlexCenter;
+
+  /* Layout */
+  margin: 0 auto;
+}

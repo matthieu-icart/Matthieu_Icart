@@ -1,0 +1,54 @@
+.Experiences {
+  /* Size */
+  width: 100%;
+
+  /* Display */
+  @include FlexColumn;
+
+  /* Font */
+  text-align: center;
+
+  & article {
+    /* Size */
+    width: 100%;
+    height: calc(80vh / 9);
+
+    /* Display */
+    @include FlexRow;
+
+    /* Transition */
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      /* Transform */
+      transform: scale(1.1);
+    }
+
+    & h3 {
+      /* Size */
+      width: 40%;
+
+      /* Font */
+      font-style: italic;
+      font-size: 25px;
+
+      @include Phone {
+        /* Font */
+        font-size: 15px;
+      }
+    }
+
+    & p {
+      /* Size */
+      width: 30%;
+
+      /* Font */
+      font-size: 20px;
+
+      @include Phone {
+        /* Font */
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+/* VARIABLES */
+$PrimaryColor: white;
+$SecondaryColor: #384454;
+$TertiaryColor: gold;
+
+$TextColor: #384454;
+$ShadowColor: grey;
+
+/* BODY */
+body {
+  /* Size */
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+
+  /* Layout */
+  margin: 0 auto;
+
+  /* Decoration */
+  background-color: $PrimaryColor;
+
+  /* Font */
+  color: $TextColor;
+  text-align: center;
+
+  & button {
+    /* Decoration */
+    background-color: transparent;
+    border: none;
+  }
+
+  & ul {
+    /* Layout */
+    margin: 0;
+    padding: 0;
+
+    /* Decoration */
+    list-style: none;
+  }
+
+  & h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  & h1 {
+    font-style: italic;
+    font-size: 5vh;
+  }
+
+  & h2 {
+    /*  Position */
+    position: absolute;
+    top: -20px;
+    z-index: -1;
+
+    text-shadow: 0px 0px 20px $TertiaryColor;
+
+    /*  Font */
+    font-size: 2vw;
+    font-style: italic;
+
+    @media screen and (max-width: 450px) {
+      /*  Font */
+      font-size: calc(10000vw / 1080);
+    }
+  }
+
+  & a {
+    /* Decoration */
+    text-decoration: none;
+    color: inherit;
+  }
+
+  & .circle {
+    /* Size */
+    width: 80px;
+    height: 80px;
+
+    /* Position */
+    position: absolute;
+    z-index: -1;
+
+    /* Decoration */
+    background: linear-gradient($TertiaryColor, $PrimaryColor);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px $ShadowColor;
+  }
+
+  & .smallCircle {
+    /* Size */
+    width: 50px;
+    height: 50px;
+
+    /* Position */
+    position: absolute;
+    z-index: -1;
+
+    /* Decoration */
+    background: linear-gradient($TertiaryColor, $PrimaryColor);
+    box-shadow: 0px 0px 10px $ShadowColor;
+    border-radius: 50%;
+  }
+
+  & .triangle {
+    /* Size */
+    width: 150px;
+    height: 50px;
+
+    /* Position */
+    position: absolute;
+    z-index: -1;
+
+    /* Decoration */
+    background: linear-gradient($TertiaryColor, $PrimaryColor);
+    box-shadow: 0px 0px 10px $ShadowColor;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  }
+
+  & .PopUp {
+    /* Animation */
+    animation: PopUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+@keyframes PopUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0.3;
+    filter: blur(5px);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}

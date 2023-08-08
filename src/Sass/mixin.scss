@@ -1,0 +1,40 @@
+/* RESPONSIVE */
+@mixin Desktop {
+  @media screen and (min-width: 451px) {
+    @content;
+  }
+}
+@mixin Phone {
+  @media screen and (max-width: 450px) {
+    @content;
+  }
+}
+
+/* CENTER */
+@mixin FlexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ROW */
+@mixin FlexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* COLUMN */
+@mixin FlexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* FULL SIZE */
+@mixin FullSize {
+  width: 100%;
+  height: 100%;
+}

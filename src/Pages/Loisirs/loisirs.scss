@@ -1,0 +1,32 @@
+.Loisirs {
+  /* Display */
+  @include FlexColumn;
+
+  & article {
+    /* Size */
+    width: 100%;
+    height: calc(80vh / 6);
+
+    /* Display */
+    @include FlexCenter;
+    flex-direction: column;
+
+    /* Transition */
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      /* Transform */
+      transform: scale(1.1);
+    }
+
+    & p {
+      /* Font */
+      font-style: italic;
+
+      @include Phone {
+        /* Font */
+        font-size: 10px;
+      }
+    }
+  }
+}

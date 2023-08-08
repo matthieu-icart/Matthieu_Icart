@@ -1,0 +1,24 @@
+.Formation {
+  /* Display */
+  @include FlexColumn;
+
+  & article {
+    /* Size */
+    width: 100%;
+    height: calc(80vh / 3);
+
+    /* Display */
+    @include FlexColumn;
+
+    /* Transition */
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    /* Animation */
+    animation: PopUpLeft 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      /* Transform */
+      transform: scale(1.1);
+    }
+  }
+}
